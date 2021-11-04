@@ -1,6 +1,6 @@
 # aplicacionpiloto
 
-A new Flutter project.
+Primera aplicacion usando flutter
 
 ## Getting Started
 
