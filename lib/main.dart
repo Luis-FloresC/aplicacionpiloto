@@ -23,6 +23,10 @@ class HomePage extends StatelessWidget {
     @override 
 
    Widget build(BuildContext context) {
-     return Text("Hola Mundo");
+     return Scaffold(
+       appBar: AppBar(),
+       floatingActionButton: FloatingActionButton(onPressed: (){},
+       child: Icon(Icons.add,)),
+     );
    }
 }
