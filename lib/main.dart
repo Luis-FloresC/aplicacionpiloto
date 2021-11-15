@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 //Creacion de constructor principal de dart
@@ -28,9 +30,29 @@ class HomePage extends StatelessWidget {
    Widget build(BuildContext context) {
      return Scaffold(
        appBar: AppBar(
-         title: const Text("Mi App"),
+         title: const Text("Ejercicio 15 de nov"),
+         backgroundColor: Colors.deepOrange,
        ),
-       body: Padding(padding: const EdgeInsets.all(16.0),child: TextField(controller: myField,)),
+       body: Center(
+        child: Column(
+          children: [
+             Text(
+           "Prograacion Movil",
+           style: TextStyle(
+             fontSize: 32,
+             fontWeight: FontWeight.bold,
+             color: Colors.orange[600]),
+             ),
+              Text(
+           "Hola Mundo",
+           style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.orange[400]),
+             ),
+          Image.network(
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fprezi.com%2Fp-wdancerp-l%2Funicah%2F&psig=AOvVaw37OQvLkbaBgaX2pQp10JLi&ust=1637106665198000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjBjNzHm_QCFQAAAAAdAAAAABAJ"
+            ,height: 350,),
+          ],
+        ),  
+         ),
        floatingActionButton: FloatingActionButton(onPressed: (){
          showDialog(context: context, builder: (context)
          {
