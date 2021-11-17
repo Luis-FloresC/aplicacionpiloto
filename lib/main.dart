@@ -43,13 +43,22 @@ class HomePage extends StatelessWidget {
              fontWeight: FontWeight.bold,
              color: Colors.orange[600]),
              ),
-              Text(
-           "Hola Mundo",
-           style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.orange[400]),
-             ),
-          Image.network(
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fprezi.com%2Fp-wdancerp-l%2Funicah%2F&psig=AOvVaw37OQvLkbaBgaX2pQp10JLi&ust=1637106665198000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjBjNzHm_QCFQAAAAAdAAAAABAJ"
-            ,height: 350,),
+             Padding(padding: EdgeInsets.all(25),
+             child: Text("Hola Mundo",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.orange[400]),),),
+              
+            
+            Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',height: 350,),
+            ElevatedButton(onPressed: () {
+              showDialog(context: context, builder: (context)
+              {
+                return AlertDialog(
+                  title: Text("Contacto"),
+                  content: Text("Escribanos: Ejemplo12@gmail.com"),
+                  actions: <Widget> [ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: Text("Cerrar"),)],
+                );
+              });
+            }, child: Text("Contacto")),
+
           ],
         ),  
          ),
